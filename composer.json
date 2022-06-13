@@ -1,0 +1,35 @@
+{
+    "name": "phel-lang/phel-phpstorm-syntax",
+    "keywords": ["phel","lisp","functional","language"],
+    "homepage": "https://phel-lang.org/",
+    "license": "MIT",
+    "require": {
+        "ext-json": "*",
+        "phel-lang/phel-lang": "^0.7",
+        "gacela-project/gacela": "^0.17",
+        "phel-lang/phel-normalized-internal": "dev-main"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "phpunit/phpunit": "^9.5",
+        "symfony/var-dumper": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhelPhpStorm\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PhelPhpStormTests\\": "tests"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "update-readme": [
+            "php update-readme.php"
+        ],
+        "test": "./vendor/bin/phpunit"
+    }
+}
