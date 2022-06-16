@@ -55,14 +55,7 @@ final class ReadmeFileGenerator
      */
     private function generateTab2(): array
     {
-        return [
-            '(',
-            ')',
-            '[',
-            ']',
-            '{',
-            '}',
-        ];
+        return [];
     }
 
     /**
@@ -111,6 +104,12 @@ final class ReadmeFileGenerator
             '-',
             '/',
             '=',
+            '(',
+            ')',
+            '[',
+            ']',
+            '{',
+            '}',
         ];
     }
 
