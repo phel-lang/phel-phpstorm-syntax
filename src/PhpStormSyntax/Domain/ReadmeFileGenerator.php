@@ -83,7 +83,6 @@ final class ReadmeFileGenerator
     private function generateTab4(): array
     {
         return [
-            '"',
             '\'',
             ',',
             '`',
@@ -105,6 +104,7 @@ final class ReadmeFileGenerator
     private function generateIgnore(): array
     {
         return [
+            '"',
             '%',
             '*',
             '+',
