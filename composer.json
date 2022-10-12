@@ -5,8 +5,8 @@
     "license": "MIT",
     "require": {
         "ext-json": "*",
-        "phel-lang/phel-lang": "^0.7",
-        "gacela-project/gacela": "^0.17",
+        "phel-lang/phel-lang": "dev-master",
+        "gacela-project/gacela": "^0.27",
         "phel-lang/phel-normalized-internal": "dev-main"
     },
     "require-dev": {
