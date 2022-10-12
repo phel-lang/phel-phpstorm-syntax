@@ -55,7 +55,11 @@ final class ReadmeFileGenerator
      */
     private function generateTab2(): array
     {
-        return [];
+        return [
+            '__DIR__',
+            '__FILE__',
+            '__MAIN_NS__',
+        ];
     }
 
     /**
@@ -65,8 +69,13 @@ final class ReadmeFileGenerator
     {
         return [
             ':',
+            '::',
+            ':require-file',
             ':require',
+            ':refer',
+            ':export',
             ':use',
+            ':as',
         ];
     }
 
@@ -76,6 +85,7 @@ final class ReadmeFileGenerator
     private function generateTab4(): array
     {
         return [
+            '@',
             '\'',
             ',',
             '`',

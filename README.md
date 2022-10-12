@@ -238,18 +238,26 @@ zipcoll
 
 ### Tab 2
 ```
-
+__DIR__
+__FILE__
+__MAIN_NS__
 ```
 
 ### Tab 3
 ```
 :
+::
+:require-file
 :require
+:refer
+:export
 :use
+:as
 ```
 
 ### Tab 4
 ```
+@
 '
 ,
 `
