@@ -4,6 +4,7 @@
     "homepage": "https://phel-lang.org/",
     "license": "MIT",
     "require": {
+        "php": ">=8.0",
         "ext-json": "*",
         "phel-lang/phel-lang": "dev-master",
         "gacela-project/gacela": "^0.27",

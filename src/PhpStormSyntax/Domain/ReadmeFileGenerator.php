@@ -58,7 +58,6 @@ final class ReadmeFileGenerator
         return [
             '__DIR__',
             '__FILE__',
-            '__MAIN_NS__',
         ];
     }
 

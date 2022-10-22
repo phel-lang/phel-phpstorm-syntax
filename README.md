@@ -240,7 +240,6 @@ zipcoll
 ```
 __DIR__
 __FILE__
-__MAIN_NS__
 ```
 
 ### Tab 3
