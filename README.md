@@ -57,6 +57,7 @@ complement
 concat
 cond
 cons
+contains-value?
 contains?
 count
 dec
