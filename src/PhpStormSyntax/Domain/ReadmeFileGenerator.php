@@ -4,15 +4,11 @@ declare(strict_types=1);
 
 namespace PhelPhpStorm\PhpStormSyntax\Domain;
 
-use PhelNormalizedInternal\PhelNormalizedInternalFacadeInterface;
-
 final class ReadmeFileGenerator
 {
-    private PhelNormalizedInternalFacadeInterface $phelInternalFacade;
-
-    public function __construct(PhelNormalizedInternalFacadeInterface $phelInternalFacade)
-    {
-        $this->phelInternalFacade = $phelInternalFacade;
+    public function __construct(
+        private PhelFunctionRepositoryInterface $phelFunctionRepository
+    ) {
     }
 
     /**
@@ -127,14 +123,13 @@ final class ReadmeFileGenerator
      */
     private function generateTab1(array $result): array
     {
-        $groupedPhelFns = $this->phelInternalFacade->getNormalizedGroupedFunctions();
+        $phelFunctions = $this->phelFunctionRepository->getAllPhelFunctions();
         $tab1 = [];
-        foreach ($groupedPhelFns as $values) {
-            foreach ($values as $value) {
-                $fnName = $value->fnName();
-                if ($this->canAddToTab1($result, $fnName)) {
-                    $tab1[] = $fnName;
-                }
+
+        foreach ($phelFunctions as $phelFn) {
+            $fnName = $phelFn->fnName();
+            if ($this->canAddToTab1($result, $fnName)) {
+                $tab1[] = $fnName;
             }
         }
 

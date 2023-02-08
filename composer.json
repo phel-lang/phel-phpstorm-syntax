@@ -6,9 +6,8 @@
     "require": {
         "php": ">=8.0",
         "ext-json": "*",
-        "phel-lang/phel-lang": "^0.8",
-        "gacela-project/gacela": "^1.0",
-        "phel-lang/phel-normalized-internal": "dev-main"
+        "phel-lang/phel-lang": "^0.9",
+        "gacela-project/gacela": "^1.0"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",
