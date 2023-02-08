@@ -129,7 +129,11 @@ final class ReadmeFileGenerator
         foreach ($phelFunctions as $phelFn) {
             $fnName = $phelFn->fnName();
             if ($this->canAddToTab1($result, $fnName)) {
-                $tab1[] = $fnName;
+                if (str_contains($fnName, '/')) {
+                    $tab1[] = substr($fnName, strpos($fnName, '/') + 1);
+                } else {
+                    $tab1[] = $fnName;
+                }
             }
         }
 
