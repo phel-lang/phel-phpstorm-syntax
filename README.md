@@ -18,6 +18,7 @@ Go to: Preferences > Editor > File types
 ### Tab 1
 ```
 **
+*build-mode*
 *compile-mode*
 *ns*
 ->
