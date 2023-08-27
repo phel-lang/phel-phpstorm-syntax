@@ -161,6 +161,9 @@ final class ReadmeFileGenerator
             'hash-map',
             'set-var',
             'definterface*',
+            'thrown?',
+            'thrown-with-msg?',
+            'output?',
         ];
 
         $tab1 = array_merge($tab1, $especialSymbols);

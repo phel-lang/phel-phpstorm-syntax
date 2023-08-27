@@ -167,6 +167,7 @@ number?
 odd?
 one?
 or
+output?
 pairs
 partial
 partition
@@ -242,6 +243,8 @@ take-last
 take-nth
 take-while
 throw
+thrown-with-msg?
+thrown?
 to-php-array
 transient
 tree-seq
