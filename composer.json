@@ -21,7 +21,6 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "PhelPhpStormTests\\": "tests"
         }
     },
     "minimum-stability": "dev",

@@ -13,22 +13,23 @@ final class ReadmeFileGenerator
 
     /**
      * @return array{
-     *     tab-1:list<string>,
-     *     tab-2:list<string>,
-     *     tab-3:list<string>,
-     *     tab-2:list<string>,
+     *     tab_1: list<string>,
+     *     tab_2: list<string>,
+     *     tab_3: list<string>,
+     *     tab_4: list<string>,
+     *     ignore: list<string>,
      * }
      */
     public function generate(): array
     {
         $result = [
-            'tab-2' => $this->generateTab2(),
-            'tab-3' => $this->generateTab3(),
-            'tab-4' => $this->generateTab4(),
+            'tab_2' => $this->generateTab2(),
+            'tab_3' => $this->generateTab3(),
+            'tab_4' => $this->generateTab4(),
             'ignore' => $this->generateIgnore(),
         ];
 
-        $result['tab-1'] = $this->generateTab1($result);
+        $result['tab_1'] = $this->generateTab1($result);
 
         return $result;
     }

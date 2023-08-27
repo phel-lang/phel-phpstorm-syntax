@@ -32,10 +32,10 @@ final class ReadmeFile
                 '%%TAB_4%%',
             ],
             [
-                implode(PHP_EOL, $contentLines['tab-1']),
-                implode(PHP_EOL, $contentLines['tab-2']),
-                implode(PHP_EOL, $contentLines['tab-3']),
-                implode(PHP_EOL, $contentLines['tab-4']),
+                implode(PHP_EOL, $contentLines['tab_1']),
+                implode(PHP_EOL, $contentLines['tab_2']),
+                implode(PHP_EOL, $contentLines['tab_3']),
+                implode(PHP_EOL, $contentLines['tab_4']),
             ],
             file_get_contents(__DIR__ . '/template/README.md')
         );
