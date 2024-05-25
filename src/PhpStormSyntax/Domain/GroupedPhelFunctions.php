@@ -124,7 +124,7 @@ final readonly class GroupedPhelFunctions
      */
     private function generateTab1(array $result): array
     {
-        $phelFunctions = $this->repository->getAllPhelFunctions();
+        $phelFunctions = $this->repository->getPhelFunctions();
         $tab1 = [];
 
         foreach ($phelFunctions as $phelFn) {

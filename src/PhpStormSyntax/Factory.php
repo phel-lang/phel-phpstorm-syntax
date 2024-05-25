@@ -36,7 +36,7 @@ final class Factory extends AbstractFactory
     {
         return new PhelFunctionRepository(
             $this->getPhelFnNormalizerFacade(),
-            $this->getConfig()->allNamespaces()
+            $this->getConfig()->namespaces()
         );
     }
 

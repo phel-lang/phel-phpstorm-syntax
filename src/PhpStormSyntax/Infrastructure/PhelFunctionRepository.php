@@ -12,15 +12,15 @@ final readonly class PhelFunctionRepository implements PhelFunctionRepositoryInt
 {
     public function __construct(
         private ApiFacadeInterface $apiFacade,
-        private array $allNamespaces = []
+        private array $namespaces = []
     ) {
     }
 
     /**
-     * @return PhelFunction
+     * @return list<PhelFunction>
      */
-    public function getAllPhelFunctions(): array
+    public function getPhelFunctions(): array
     {
-        return $this->apiFacade->getPhelFunctions($this->allNamespaces);
+        return $this->apiFacade->getPhelFunctions($this->namespaces);
     }
 }
