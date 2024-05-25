@@ -8,7 +8,7 @@ use Phel\Api\ApiFacadeInterface;
 use Phel\Api\Transfer\PhelFunction;
 use PhelPhpStorm\PhpStormSyntax\Domain\PhelFunctionRepositoryInterface;
 
-final class PhelFunctionRepository implements PhelFunctionRepositoryInterface
+final readonly class PhelFunctionRepository implements PhelFunctionRepositoryInterface
 {
     public function __construct(
         private ApiFacadeInterface $apiFacade,
