@@ -8,26 +8,26 @@ use Gacela\Framework\AbstractConfig;
 use Gacela\Framework\AbstractFactory;
 use Phel\Api\ApiFacadeInterface;
 use PhelPhpStorm\PhpStormSyntax\Domain\PhelFunctionRepositoryInterface;
-use PhelPhpStorm\PhpStormSyntax\Domain\ReadmeFileGenerator;
+use PhelPhpStorm\PhpStormSyntax\Domain\GroupedPhelFunctions;
 use PhelPhpStorm\PhpStormSyntax\Infrastructure\PhelFunctionRepository;
-use PhelPhpStorm\PhpStormSyntax\Infrastructure\ReadmeFile;
+use PhelPhpStorm\PhpStormSyntax\Infrastructure\MarkdownReadmeFileGenerator;
 
 /**
  * @method Config getConfig()
  */
 final class Factory extends AbstractFactory
 {
-    public function createReadmeFile(): ReadmeFile
+    public function createReadmeFile(): MarkdownReadmeFileGenerator
     {
-        return new ReadmeFile(
-            $this->createReadmeFileGenerator(),
+        return new MarkdownReadmeFileGenerator(
+            $this->createGroupedPhelFunctions(),
             $this->getConfig()->getAppRootDir(),
         );
     }
 
-    private function createReadmeFileGenerator(): ReadmeFileGenerator
+    private function createGroupedPhelFunctions(): GroupedPhelFunctions
     {
-        return new ReadmeFileGenerator(
+        return new GroupedPhelFunctions(
             $this->createPhelFunctionRepository()
         );
     }
@@ -36,7 +36,7 @@ final class Factory extends AbstractFactory
     {
         return new PhelFunctionRepository(
             $this->getPhelFnNormalizerFacade(),
-            $this->getConfig()->allNamespaces()
+            $this->getConfig()->namespaces()
         );
     }
 

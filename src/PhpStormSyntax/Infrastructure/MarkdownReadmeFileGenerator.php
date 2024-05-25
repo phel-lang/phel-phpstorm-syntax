@@ -4,25 +4,19 @@ declare(strict_types=1);
 
 namespace PhelPhpStorm\PhpStormSyntax\Infrastructure;
 
-use PhelPhpStorm\PhpStormSyntax\Domain\ReadmeFileGenerator;
+use PhelPhpStorm\PhpStormSyntax\Domain\GroupedPhelFunctions;
 
-final class ReadmeFile
+final readonly class MarkdownReadmeFileGenerator
 {
-    private ReadmeFileGenerator $apiMarkdownGenerator;
-
-    private string $appRootDir;
-
     public function __construct(
-        ReadmeFileGenerator $apiMarkdownGenerator,
-        string $appRootDir,
+        private GroupedPhelFunctions $phelFunctions,
+        private string $appRootDir,
     ) {
-        $this->apiMarkdownGenerator = $apiMarkdownGenerator;
-        $this->appRootDir = $appRootDir;
     }
 
     public function generate(): void
     {
-        $contentLines = $this->apiMarkdownGenerator->generate();
+        $contentLines = $this->phelFunctions->groupedByTabs();
 
         $updatedReadme = str_replace(
             [

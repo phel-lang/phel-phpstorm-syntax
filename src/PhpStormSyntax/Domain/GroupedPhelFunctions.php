@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace PhelPhpStorm\PhpStormSyntax\Domain;
 
-final class ReadmeFileGenerator
+final readonly class GroupedPhelFunctions
 {
     public function __construct(
-        private PhelFunctionRepositoryInterface $phelFunctionRepository
+        private PhelFunctionRepositoryInterface $repository
     ) {
     }
 
@@ -20,7 +20,7 @@ final class ReadmeFileGenerator
      *     ignore: list<string>,
      * }
      */
-    public function generate(): array
+    public function groupedByTabs(): array
     {
         $result = [
             'tab_2' => $this->generateTab2(),
@@ -124,7 +124,7 @@ final class ReadmeFileGenerator
      */
     private function generateTab1(array $result): array
     {
-        $phelFunctions = $this->phelFunctionRepository->getAllPhelFunctions();
+        $phelFunctions = $this->repository->getPhelFunctions();
         $tab1 = [];
 
         foreach ($phelFunctions as $phelFn) {

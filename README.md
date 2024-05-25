@@ -47,7 +47,9 @@ bit-shift-left
 bit-shift-right
 bit-test
 bit-xor
+blank?
 boolean?
+capitalize
 case
 coerce-in
 comment
@@ -92,6 +94,8 @@ emit-response
 empty?
 encode
 encode-value
+ends-with?
+escape
 escape-html
 eval
 even?
@@ -125,6 +129,8 @@ identity
 if
 if-not
 inc
+includes?
+index-of
 indexed?
 int?
 interleave
@@ -132,6 +138,7 @@ interpose
 intersection
 invert
 is
+join
 juxt
 keep
 keep-indexed
@@ -139,10 +146,12 @@ keys
 keyword
 keyword?
 kvs
+last-index-of
 let
 list
 list?
 loop
+lower-case
 map
 map-indexed
 mapcat
@@ -196,6 +205,7 @@ rand-nth
 range
 raw-string
 raw-string?
+re-quote-replacement
 re-seq
 read-string
 recur
@@ -203,6 +213,8 @@ reduce
 reduce2
 remove
 repeat
+replace
+replace-first
 report
 request
 request-from-globals
@@ -227,8 +239,11 @@ slice
 some?
 sort
 sort-by
+split
 split-at
+split-lines
 split-with
+starts-with?
 str
 str-contains?
 string?
@@ -248,6 +263,10 @@ thrown?
 to-php-array
 transient
 tree-seq
+trim
+trim-newline
+triml
+trimr
 true?
 truthy?
 try
@@ -260,6 +279,7 @@ update
 update-in
 uploaded-file
 uploaded-file?
+upper-case
 uri
 uri-from-globals
 uri-from-string

@@ -8,19 +8,19 @@ use Phel\Api\ApiFacadeInterface;
 use Phel\Api\Transfer\PhelFunction;
 use PhelPhpStorm\PhpStormSyntax\Domain\PhelFunctionRepositoryInterface;
 
-final class PhelFunctionRepository implements PhelFunctionRepositoryInterface
+final readonly class PhelFunctionRepository implements PhelFunctionRepositoryInterface
 {
     public function __construct(
         private ApiFacadeInterface $apiFacade,
-        private array $allNamespaces = []
+        private array $namespaces = []
     ) {
     }
 
     /**
-     * @return PhelFunction
+     * @return list<PhelFunction>
      */
-    public function getAllPhelFunctions(): array
+    public function getPhelFunctions(): array
     {
-        return $this->apiFacade->getPhelFunctions($this->allNamespaces);
+        return $this->apiFacade->getPhelFunctions($this->namespaces);
     }
 }

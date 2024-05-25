@@ -5,20 +5,16 @@ declare(strict_types=1);
 namespace PhelPhpStorm\PhpStormSyntax;
 
 use Gacela\Framework\AbstractConfig;
+use Phel\Api\ApiConfig;
 
 final class Config extends AbstractConfig
 {
     /**
      * @return list<string>
      */
-    public function allNamespaces(): array
+    public function namespaces(): array
     {
-        return [
-            'phel\\core',
-            'phel\\http',
-            'phel\\html',
-            'phel\\test',
-            'phel\\json',
-        ];
+        // all namespaces' functions except from the repl
+        return array_diff((new ApiConfig())->allNamespaces(), ['phel\\repl']);
     }
 }
