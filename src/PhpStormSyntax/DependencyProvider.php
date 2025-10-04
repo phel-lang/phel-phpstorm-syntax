@@ -13,7 +13,7 @@ use Phel\Api\ApiFacade;
  */
 final class DependencyProvider extends AbstractDependencyProvider
 {
-    public const FACADE_API_PHEL = 'FACADE_API_PHEL';
+    public const string FACADE_API_PHEL = 'FACADE_API_PHEL';
 
     public function provideModuleDependencies(Container $container): void
     {

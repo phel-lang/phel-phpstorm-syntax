@@ -15,6 +15,6 @@ final class Config extends AbstractConfig
     public function namespaces(): array
     {
         // all namespaces' functions except from the repl
-        return array_diff((new ApiConfig())->allNamespaces(), ['phel\\repl']);
+        return array_diff(ApiConfig::allNamespaces(), ['phel\\repl']);
     }
 }

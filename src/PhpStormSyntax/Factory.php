@@ -35,12 +35,12 @@ final class Factory extends AbstractFactory
     private function createPhelFunctionRepository(): PhelFunctionRepositoryInterface
     {
         return new PhelFunctionRepository(
-            $this->getPhelFnNormalizerFacade(),
+            $this->getPhelApiFacade(),
             $this->getConfig()->namespaces()
         );
     }
 
-    private function getPhelFnNormalizerFacade(): ApiFacadeInterface
+    private function getPhelApiFacade(): ApiFacadeInterface
     {
         return $this->getProvidedDependency(DependencyProvider::FACADE_API_PHEL);
     }
