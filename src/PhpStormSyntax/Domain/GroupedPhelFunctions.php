@@ -128,7 +128,7 @@ final readonly class GroupedPhelFunctions
         $tab1 = [];
 
         foreach ($phelFunctions as $phelFn) {
-            $fnName = $phelFn->fnName();
+            $fnName = $phelFn->name();
             if ($this->canAddToTab1($result, $fnName)) {
                 if (str_contains($fnName, '/')) {
                     $tab1[] = substr($fnName, strpos($fnName, '/') + 1);
