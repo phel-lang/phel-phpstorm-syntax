@@ -1,3 +1,12 @@
+# 🚨 Repository Deprecated
+
+The `phel-phpstorm-syntax` repository is no longer maintained.
+Please use the official [IntelliJ Plugin](https://plugins.jetbrains.com/plugin/28459-phel-lang) instead, which is also supported in PhpStorm:
+
+👉 [phel-lang/phel-intellij-plugin](https://github.com/phel-lang/phel-intellij-plugin)
+
+---
+
 # phel-phpstorm-syntax
 
 A guide to highlight phel syntax when using PhpStorm IDE
